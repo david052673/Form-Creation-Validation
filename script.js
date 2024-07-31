@@ -1,5 +1,7 @@
-document. addEventListener("DOMContentLoaded", (Event)=>{
-       parsed
+document. addEventListener("DOMContentLoaded",function() {
+   
+}
+       
 
 
 const form = document. getElementById(id="registration-form");
