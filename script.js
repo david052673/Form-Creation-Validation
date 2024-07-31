@@ -64,13 +64,10 @@ document. addEventListener("DOMContentLoaded",function() {
       feedbackDiv.append(messages);
       feedbackDiv.innerHTML = messages;
       feedbackDiv.style.color = '#dc3545';
+      
     }
     
-    if ("username.length<=3"){
-      let isValid ="false"
-      messages.push('Username must be at least 3 characters long.');
-
-    }
+    
 
 
    );
