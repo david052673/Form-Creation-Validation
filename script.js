@@ -1,8 +1,7 @@
 document. addEventListener("DOMContentLoaded",function() {
    
 }
-       
-
+      
 
 const form = document. getElementById(id="registration-form");
 console.log (form);
@@ -67,7 +66,11 @@ form. addEventListener('submit',
       feedbackDiv.style.color = '#dc3545';
     }
     
+    if ("Username.length<=3"){
+      let isValid ="false"
+      messages.push('Username must be at least 3 characters long.');
 
+    }
 
 
    });
