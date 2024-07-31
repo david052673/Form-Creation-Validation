@@ -1,43 +1,71 @@
 document. addEventListener("DOMContentLoaded", (Event)=>{
        parsed
-});
+
 
 const form = document. getElementById(id="registration-form");
 console.log (form);
 
-const feedbackDiv = document. querySelector(id="form-feedback");
+const feedbackDiv = document. querySelector(id="form-feedback").display=CSSLayerBlockRule;
 
 
-submit. addEventListener(
-     Event.preventDefault() );
+form. addEventListener('submit',
+   function(){
+
+   
+     Event.preventDefault() 
+   }
+   
+   
+   );
 
 
-    let .value= document.getElementById(id="username");
+    const Username= document.getElementById(id="username").value.trim;
 
 
-    let .value= document.getElementById(id="email");
+    const Email = document.getElementById(id="email").value.trim;
 
-    let .value= document.getElementById(id="password");
-
-    let isValid="true"
-    let messages= ["error","incorrect","input a strong password"]
+    const Password = document.getElementById(id="password").value.trim;
 
 
-    ["if (username<3)",isValid=false]{
-       ["message[0]"]
-    }["else"]{
-        [""]
+
+    let isValid=("true")
+    let messages= []
+
+
+    
+    if ("Username.length<=3"){
+      let isValid ="false"
+      messages.push('Username must be at least 3 characters long.');
+
+    }
+
+    if ("Email.value=/(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))/"){
+
+    }else{
+      let isValid= "false"
+      messages.push('invalid email');
     }
 
 
-    ["if (email==="@$.")",isValid=true]{
-       [""]
-    }["else",isValid=false]{
-       ["message[1]"]
+
+    if ('password.length<8'){
+      let isValid="false"
+      messages.push('password not less than 8');
+
     }
 
-    ["if (password==<8)",isValid=false]{
-       ["message[2]"]
-    }["else"]{
-        [""]
+    if('isValid = true'){
+     feedbackDiv.textcontent="Registration successful!";
+     feedbackDiv.style.color='#28a745';
+
+    }else{
+      messages.join('<br>');
+      feedbackDiv.append(messages);
+      feedbackDiv.innerHTML = messages;
+      feedbackDiv.style.color = '#dc3545';
     }
+    
+
+
+
+   });
