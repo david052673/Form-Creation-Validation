@@ -2,7 +2,6 @@ document. addEventListener("DOMContentLoaded",function() {
    
    }
       
-
     const form = document. getElementById(id="registration-form");
     console.log (form);
 
